@@ -3,25 +3,58 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: 255 255 255;
+    --foreground: 17 24 39;
+    --card-bg: 243 244 246;
+    --card-text: 31 41 55;
+    --muted: 249 250 251;
+    --muted-text: 107 114 128;
+    --border: 229 231 235;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-theme="dark"] {
+    --background: 3 7 18;
+    --foreground: 243 244 246;
+    --card-bg: 31 41 55;
+    --card-text: 243 244 246;
+    --muted: 55 65 81;
+    --muted-text: 156 163 175;
+    --border: 55 65 81;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(var(--background));
+    color: rgb(var(--foreground));
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.bg-card {
+    background-color: rgb(var(--card-bg));
+    color: rgb(var(--card-text));
+}
+
+.text-muted {
+    color: rgb(var(--muted-text));
+}
+
+.border-theme {
+    border-color: rgb(var(--border));
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.shimmer {
+    background: linear-gradient(90deg,
+            rgba(55, 65, 81, 0.4) 25%,
+            rgba(75, 85, 99, 0.6) 37%,
+            rgba(55, 65, 81, 0.4) 63%);
+    background-size: 200% 100%;
+    animation: shimmer 1.4s infinite linear;
 }
