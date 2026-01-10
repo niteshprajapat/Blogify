@@ -10,16 +10,6 @@ export default function Header() {
                 >
                     Blogify
                 </Link>
-
-                <div className="flex items-center gap-6">
-                    <Link
-                        href="/"
-                        className="text-white/80 hover:text-white transition"
-                    >
-                        Home
-                    </Link>
-
-                </div>
             </nav>
         </header>
     );

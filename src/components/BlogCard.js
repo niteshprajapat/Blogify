@@ -88,10 +88,10 @@ export default function BlogCard({ blog }) {
             text-gray-400 text-base 
             mb-5 line-clamp-3 leading-relaxed
           ">
-                            {blog.description}
+                            {blog.description.length > 45 ? `${blog.description.slice(0, 45)}...` : blog.description}
                         </p>
 
-                        {/* Meta */}
+
                         <div className="flex items-center justify-between text-sm">
                             <time
                                 dateTime={blog.created_at}

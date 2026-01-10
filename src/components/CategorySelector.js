@@ -33,7 +33,7 @@ export default function CategorySelector({
         <select
             defaultValue={initialValue}
             onChange={(e) => debouncedUpdate(e.target.value)}
-            className="
+            className="min-w-[240px]
         w-full rounded-xl border border-gray-700
         py-4 px-5 bg-gray-800/60 text-gray-100 text-base
         focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30

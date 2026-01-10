@@ -51,28 +51,41 @@ export default async function Home({ searchParams }) {
                 </div>
 
                 {/* Filter Card */}
-                <div className="mb-12 lg:mb-16">
-                    <div className="
-    bg-gray-900/70 backdrop-blur-xl 
-    border border-gray-700/50 rounded-2xl 
-    shadow-2xl shadow-black/40 overflow-hidden
-    transition-all duration-300
-  ">
-                        <div className="p-6 sm:p-8 lg:p-10">
-                            <div className="flex flex-col lg:flex-row flex-wrap gap-6 lg:gap-8 items-end">
-                                {/* Search */}
-                                <div className="flex-1 min-w-[340px]">
-                                    <label htmlFor="search" className="block text-base font-medium text-gray-200 mb-2.5">
+
+                <div className="mb-8 sm:mb-12 lg:mb-16">
+                    <div
+                        className="
+      bg-gray-900/70 backdrop-blur-xl
+      border border-gray-700/50 rounded-2xl
+      shadow-2xl shadow-black/40 overflow-hidden
+      transition-all duration-300
+    "
+                    >
+                        <div className="p-4 sm:p-6 lg:p-10">
+                            <div
+                                className="
+          grid grid-cols-1
+          sm:grid-cols-2
+          lg:flex lg:flex-row lg:flex-wrap
+          gap-5 sm:gap-6 lg:gap-8
+          items-stretch lg:items-end
+        "
+                            >
+                                <div className="w-full sm::w-full lg:flex-1">
+                                    <label
+                                        htmlFor="search"
+                                        className="block text-sm sm:text-base font-medium text-gray-200 mb-2"
+                                    >
                                         Search by Title
                                     </label>
-                                    <div className="relative">
-                                        <SearchInput initialValue={search} />
-                                    </div>
+                                    <SearchInput initialValue={search} />
                                 </div>
 
-                                {/* Category */}
-                                <div className="w-full sm:w-56 lg:w-64">
-                                    <label htmlFor="category" className="block text-base font-medium text-gray-200 mb-2.5">
+                                <div className="w-full sm:w-auto lg:w-64">
+                                    <label
+                                        htmlFor="category"
+                                        className="block text-sm sm:text-base font-medium text-gray-200 mb-2"
+                                    >
                                         Category
                                     </label>
                                     <CategorySelector
@@ -81,16 +94,23 @@ export default async function Home({ searchParams }) {
                                     />
                                 </div>
 
-                                {/* Per Page */}
-                                <div className="w-full sm:w-44 lg:w-48">
-                                    <label htmlFor="limit" className="block text-base font-medium text-gray-200 mb-2.5">
+                                <div className="w-full sm:w-full lg:w-48">
+                                    <label
+                                        htmlFor="limit"
+                                        className="block text-sm sm:text-base font-medium text-gray-200 mb-2"
+                                    >
                                         Per Page
                                     </label>
                                     <LimitSelector initialValue={limit.toString()} />
                                 </div>
 
-                                {/* Clear Filters Button */}
-                                <div className="w-full sm:w-auto">
+                                <div className="w-full sm:col-span-1 lg:w-auto">
+                                    <label
+                                        htmlFor="limit"
+                                        className="block text-sm sm:text-base font-medium text-gray-200 mb-2"
+                                    >
+                                        Reset
+                                    </label>
                                     <ClearFiltersButton />
                                 </div>
                             </div>

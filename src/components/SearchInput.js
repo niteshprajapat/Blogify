@@ -30,7 +30,7 @@ export default function SearchInput({ initialValue = '' }) {
     }, [initialValue]);
 
     return (
-        <div className="relative flex-1 min-w-[340px]">
+        <div className="relative flex-1 min-w-[240px]">
             <input
                 type="search"
                 placeholder="Search by title (e.g. react, next.js, typescript...)"

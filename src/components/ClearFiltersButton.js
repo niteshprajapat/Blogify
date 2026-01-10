@@ -12,7 +12,7 @@ export default function ClearFiltersButton() {
     return (
         <button
             onClick={handleClear}
-            className="
+            className="w-full 
         px-8 py-4 rounded-xl font-medium text-base
         bg-gray-800/80 text-gray-300 border border-gray-700
         hover:bg-gray-700 hover:text-white hover:border-gray-600
