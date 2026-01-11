@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Blog Application
+
+A modern, dark-mode blog platform built with **Next.js 14** (App Router) and the Sling Academy public API. This project demonstrates clean server-side rendering, dynamic routing, filtering, pagination, and responsive UI design — all while strictly adhering to the constraint of **avoiding client components** (except minimal ones for instant UX like search and filters).
+
+## Features
+
+-   **Fully Server Components** (minimal client code only for debounced inputs)
+-   **Dark Mode** with glassmorphism cards and subtle blur effects
+-   **Blog Listing** (`/`)
+    -   Responsive grid (1–3 columns)
+    -   Instant **title search** with debounce (no submit button needed)
+    -   **Category filter** (dynamic from data + "All Categories")
+    -   **Posts per page** selector (instant update)
+    -   **Clear Filters** button (resets everything to defaults)
+    -   Pagination with preserved filters
+    -   **Skeleton loading** during fetches
+-   **Single Blog Post** (`/blog/[slug]-[id]`)
+    -   Hybrid ID routing (SEO-friendly)
+    -   Clean, immersive dark layout with hero image
+    -   Prose styling for rich HTML content
+-   **Top Visited Blogs** page (`/top-blogs`)
+    -   Simulated popularity (fake views + sort)
+    -   Highlighted top posts
+-   Responsive design, Tailwind CSS, modern hover effects
+-   Error handling & 404 page
+
+## Tech Stack
+
+-   **Next.js 14** (App Router)
+-   **Tailwind CSS** (dark theme + custom utilities)
+-   **React Suspense** + skeletons for loading states
+-   Public API: [Sling Academy Blog Posts](https://api.slingacademy.com/v1/sample-data/blog-posts)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+-   Node.js 18+ (recommended: 20+)
+-   npm, yarn, pnpm, or bun
+
+### Installation
 
 ```bash
-npm run dev
+# Clone the repository
+git clone https://github.com/niteshprajapat/Blogify
+cd your-repo
+
+# Install dependencies
+npm install
 # or
-yarn dev
+yarn install
 # or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
